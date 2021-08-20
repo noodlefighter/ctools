@@ -33,7 +33,7 @@ int log_printf(int lv, const char *fmt, ...)
 	return 0;
 }
 
-void log_hexdump(int lv, const uint8_t *data, uint32_t size)
+void log_hexdump(int lv, const void *data, uint32_t size)
 {
 	uint32_t i;
 
@@ -41,7 +41,7 @@ void log_hexdump(int lv, const uint8_t *data, uint32_t size)
 //		if (i && (i % 16 == 0))
 //			LOG("\r\n");
 
-		log_printf(lv, "%02X ", data[i]);
+		log_printf(lv, "%02X ", (int)((uint8_t*)data)[i]);
 	}
 
 	log_printf(lv, "\r\n");

@@ -62,7 +62,7 @@ extern "C" {
 
 void log_level_set(int lv);
 int log_printf(int lv, const char *fmt, ...);
-void log_hexdump(int lv, const uint8_t *data, uint32_t size);
+void log_hexdump(int lv, const void *data, uint32_t size);
 void log_assert(const char *src_file_path, int line);
 
 #ifdef __cplusplus
