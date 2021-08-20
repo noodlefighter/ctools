@@ -18,7 +18,7 @@ typedef struct {
 	uint8_t *buff;
 } queue_t;
 
-#define QUEUE_INIT(_buff, _buff_size)    (queue_t){ .buff = _buff, .size = _buff_size }
+#define QUEUE_INIT(_buff, _buff_size)    { .buff = _buff, .size = _buff_size }
 
 bool queue_clear(queue_t *queue);
 bool queue_append(queue_t *queue, uint8_t item);
