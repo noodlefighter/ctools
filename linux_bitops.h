@@ -24,6 +24,9 @@ extern "C" {
 #if defined(_MSC_VER)
 #define __inline__ __inline
 #endif
+#if defined ( __CC_ARM )
+#define __inline__ __inline
+#endif
 
 
 /**
